@@ -1,0 +1,21 @@
+{
+  "orders": 96211,
+  "customers": 93104,
+  "revenue": 13181027.0,
+  "avg_order_value": 137.0,
+  "late_pct": 6.8,
+  "avg_review": 4.16,
+  "growth_pct": 263.0,
+  "peak_month": "2017-11",
+  "n_categories": 74,
+  "n_top_cats_50pct": 8,
+  "review_on_time": 4.29,
+  "review_very_late": 1.73,
+  "low_review_on_time": 9.2,
+  "low_review_very_late": 78.2,
+  "one_time_customers_pct": 97.0,
+  "top10_sellers_share": 67.0,
+  "top3_states": "SP, RJ, MG",
+  "top3_states_share": 63.4,
+  "credit_card_pct": 77.0
+}

@@ -1,0 +1,13 @@
+check,table,severity,failing_rows,total_rows,failing_pct,status
+Duplicate order_id,orders,high,0,99441,0.0,OK
+Order without customer,orders,high,0,99441,0.0,OK
+Item without order,order_items,high,0,112650,0.0,OK
+Item without product,order_items,high,0,112650,0.0,OK
+Negative or zero price,order_items,high,0,112650,0.0,OK
+Delivered order without delivery date,orders,medium,8,99441,0.008,WARNING
+Delivered before purchase,orders,medium,0,99441,0.0,OK
+Order without items,orders,medium,775,99441,0.779,WARNING
+Order with several reviews,order_reviews,low,547,98673,0.554,WARNING
+Product without category,products,low,610,32951,1.851,WARNING
+Category without English translation,products,low,2,73,2.74,WARNING
+Payment with zero value,order_payments,low,9,103886,0.009,WARNING
