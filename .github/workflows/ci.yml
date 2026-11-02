@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-dev.txt
+          pip install -e .
+
+      - name: Lint
+        run: ruff check src scripts tests
+
+      - name: Unit tests
+        run: pytest -q
+
+      - name: Run the full analysis on the real dataset
+        run: |
+          python scripts/download_data.py
+          python -m olist_analysis.pipeline
+
+      - name: Upload reports and Power BI data
+        uses: actions/upload-artifact@v4
+        with:
+          name: analysis-report
+          path: |
+            reports/
+            powerbi/data/
