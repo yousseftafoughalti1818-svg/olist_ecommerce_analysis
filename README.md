@@ -1,6 +1,6 @@
 # 🛒 E-commerce Sales Analysis - SQL, Python & Power BI
 
-![CI](https://github.com/yousseftafoughalti1818-svg/olist-ecommerce-analysis/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/yousseftafoughalti1818-svg/olist_ecommerce_analysis/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![SQL](https://img.shields.io/badge/SQL-SQLite-003B57)
 ![Power BI](https://img.shields.io/badge/Power%20BI-dashboard-F2C811)
@@ -121,7 +121,7 @@ Before any analysis, 12 automatic checks are run on the raw tables
 ## 🧱 Project structure
 
 ```
-olist-ecommerce-analysis/
+olist_ecommerce_analysis/
 ├── sql/
 │   ├── 00_views.sql              # analysis views (one row per order / per item)
 │   └── analysis/                 # one SQL file per business question
@@ -152,8 +152,8 @@ window functions (`SUM() OVER`, running totals, `NTILE`), date functions.
 ## 🚀 Quick start
 
 ```bash
-git clone https://github.com/yousseftafoughalti1818-svg/olist-ecommerce-analysis.git
-cd olist-ecommerce-analysis
+git clone https://github.com/yousseftafoughalti1818-svg/olist_ecommerce_analysis.git
+cd olist_ecommerce_analysis
 python -m venv .venv
 .venv\Scripts\activate            # Windows  (Linux/Mac: source .venv/bin/activate)
 pip install -r requirements-dev.txt
